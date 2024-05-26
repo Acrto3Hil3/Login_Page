@@ -1,0 +1,110 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif,'Times New Roman', Times, serif;
+}
+body{
+    margin: 0;
+}
+:root{
+    /* --primary-ligth-hsl:200, 81%, 68%; */
+    /* --primary-ligth-hsl:138, 14%, 36%; */
+    /* --primary-ligth-hsl:214, 19%, 47%; */
+    /* --primary-ligth-hsl:194, 37%, 46%; */
+    /* --primary-hsl:227, 35%, 27%; */
+    --primary-ligth-hsl:133, 23%, 37%;
+    --primary-hsl:210, 82%, 56%;
+    --primary-dark-hsl:226, 23%, 8%;
+    --success-hsl:100, 60%, 50%;
+    --error-hsl: 0, 50%, 50%;
+}
+.full-screen-container{
+    background-image: url(https://source.unsplash.com/random/1200×900/?dragonballz);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    --color:hsl(var(--primary-dark-hsl),0.8);
+    background-color:var(--color);
+    box-shadow: 0 0 15px 0 var(--color);
+    padding: 40px 30px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+}
+.login-title{
+    margin: 0;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    margin-top: 40px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.input-group label{
+    color: wheat;
+    font-weight: lighter;
+}
+.input-group input{
+    font-size: 1.30rem;
+    padding: 0.2rem;
+    background-color: hsl(var(--primary-ligth-hsl),0.2);
+    border: none;
+    outline: none;
+    border-radius: 15em;
+    color: white;
+    font-weight: lighter;
+}
+.input-group.success input{
+    box-shadow: 0 0 2px hsl(var(--success-hsl));
+}
+.input-group.error input{
+    box-shadow: 0 0 2px hsl(var(--error-hsl));
+}
+.input-group input:focus{
+    box-shadow: 0 0 10px hsl(var(--primary-hsl));
+}
+.input-group .msg{
+    display: none;
+    font-size: 0.75rem;
+}
+.input-group.input-group.success .email-msg,
+.input-group.error .password-msg{
+    display: block;
+}
+.input-group.error .password-msg{
+    color: hsl(var(--error-hsl));
+}
+.input-group.success .email-msg{
+    color: hsl(var(--success-hsl));
+}
+
+.login-button{
+    padding: 0.5em 1em;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: lighter;
+    background-color: hsl(var(--primary-hsl),.25);
+    border: 1px solid hsl(var(--primary-hsl));
+    border-radius: .35em;
+    outline: none;
+    cursor: pointer;
+}
+.login-button:hover,
+.login-button:focus{
+    background-color: hsl(var(--primary-hsl),.4);
+}
